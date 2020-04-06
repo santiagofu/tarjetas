@@ -3,9 +3,12 @@ package main;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 import MenusIndividuales.MenuEstandares;
 import MenusIndividuales.MenuLeyes;
+import MenusIndividuales.MenuMetricaV3;
+import MenusIndividuales.MenuNTI;
 
 import javax.swing.JButton;
 import java.awt.Font;
@@ -84,6 +87,20 @@ public class Inicio {
 		btnEstandares.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				MenuEstandares.loadEstandares();
+			}
+		});
+		
+		btnNTI.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//MenuNTI.loadNTI();
+				JOptionPane.showMessageDialog(null,"Aún en desarrollo","",JOptionPane.WARNING_MESSAGE);
+			}
+		});
+		
+		btnMetrica3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//MenuMetricaV3.loadMetricaV3();
+				JOptionPane.showMessageDialog(null,"Aún en desarrollo","",JOptionPane.WARNING_MESSAGE);
 			}
 		});
 

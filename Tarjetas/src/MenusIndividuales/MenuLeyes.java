@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 import Jugar.JugarLeyes;
 
@@ -33,6 +34,12 @@ public class MenuLeyes {
 	frmLeyes.getContentPane().add(btnJugar);
 	
 	frmLeyes.setVisible(true);
+	
+	btnAñadir.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent arg0) {
+			JOptionPane.showMessageDialog(null,"Aún en desarrollo","",JOptionPane.WARNING_MESSAGE);
+		}
+	});
 	
 	btnJugar.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent arg0) {

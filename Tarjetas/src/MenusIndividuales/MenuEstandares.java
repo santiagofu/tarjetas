@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 import Jugar.JugarEstandares;
 
@@ -24,7 +25,7 @@ public class MenuEstandares {
 		
 		JButton btnAñadir = new JButton("AÑADIR ESTÁNDAR");
 		btnAñadir.setBackground(Color.LIGHT_GRAY);
-		btnAñadir.setFont(new Font("Arial", Font.BOLD, 20));
+		btnAñadir.setFont(new Font("Arial", Font.BOLD, 17));
 		btnAñadir.setBounds(100, 100, 202, 49);
 		frmEstandares.getContentPane().add(btnAñadir);
 		
@@ -35,6 +36,12 @@ public class MenuEstandares {
 		frmEstandares.getContentPane().add(btnJugar);
 		
 		frmEstandares.setVisible(true);
+		
+		btnAñadir.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				JOptionPane.showMessageDialog(null,"Aún en desarrollo","",JOptionPane.WARNING_MESSAGE);
+			}
+		});
 		
 		btnJugar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
