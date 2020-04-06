@@ -7,10 +7,13 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JTextArea;
 
 import tarjetaPckg.Tarjeta;
 
 public class PantallaJuego {
+	
+	private static String texto;
 
 	public static void jugarTarjetas(Tarjeta[] listado) {
 		
@@ -21,6 +24,14 @@ public class PantallaJuego {
 		frmJuegoTarjetas.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frmJuegoTarjetas.getContentPane().setLayout(null);
 		
+		JTextArea lbl = new JTextArea("");
+		lbl.setEditable(false);
+		lbl.setLineWrap(true);
+		lbl.setWrapStyleWord(true);
+		lbl.setBackground(new Color(55, 184, 219));
+		lbl.setFont(new Font("Tahoma", Font.BOLD, 15));
+		lbl.setBounds(200, 100, 300, 150);
+		frmJuegoTarjetas.getContentPane().add(lbl);
 		
 		
 		JButton btnSiguiente = new JButton("SIGUIENTE");
@@ -34,20 +45,26 @@ public class PantallaJuego {
 		btnSolucionar.setFont(new Font("Arial", Font.BOLD, 20));
 		btnSolucionar.setBounds(400, 350, 200, 50);
 		frmJuegoTarjetas.getContentPane().add(btnSolucionar);
+		Tarjeta inicial = TriggerJugar.CargarPrimeraTarjeta();
+		lbl.setText(inicial.getAnverso().toString());
+		
+		texto = lbl.getText();
 		
 		frmJuegoTarjetas.setVisible(true);
 		
-		TriggerJugar.CargarPrimeraTarjeta();
-		
 		btnSiguiente.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				TriggerJugar.Siguiente();
+				texto = lbl.getText();
+				Tarjeta siguiente = TriggerJugar.Siguiente();
+				
 			}
 		});
 		
 		btnSolucionar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				TriggerJugar.Solucionar();
+				texto = lbl.getText();
+				Tarjeta solucion = TriggerJugar.Solucionar(texto);
+				
 			}
 		});
 		
