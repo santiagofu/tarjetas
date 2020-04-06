@@ -9,6 +9,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JTextArea;
 
+import Jugar.JugarLeyes;
 import tarjetaPckg.Tarjeta;
 
 public class PantallaJuego {
@@ -44,7 +45,7 @@ public class PantallaJuego {
 		btnSolucionar.setFont(new Font("Arial", Font.BOLD, 20));
 		btnSolucionar.setBounds(400, 350, 200, 50);
 		frmJuegoTarjetas.getContentPane().add(btnSolucionar);
-		Tarjeta inicial = TriggerJugar.CargarPrimeraTarjeta();
+		Tarjeta inicial = JugarLeyes.CargarPrimeraTarjeta();
 		lbl.setText(inicial.getAnverso().toString());
 
 		texto = lbl.getText();
@@ -55,7 +56,7 @@ public class PantallaJuego {
 			public void actionPerformed(ActionEvent arg0) {
 				btnSiguiente.setEnabled(false);
 				btnSolucionar.setEnabled(false);
-				Tarjeta siguiente = TriggerJugar.Siguiente();
+				Tarjeta siguiente = JugarLeyes.Siguiente();
 				lbl.setText("");
 				lbl.setText(siguiente.getAnverso());
 				btnSiguiente.setEnabled(true);
@@ -68,7 +69,7 @@ public class PantallaJuego {
 				btnSiguiente.setEnabled(false);
 				btnSolucionar.setEnabled(false);
 				texto = lbl.getText();
-				Tarjeta solucion = TriggerJugar.Solucionar(texto);
+				Tarjeta solucion = JugarLeyes.Solucionar(texto);
 				lbl.setText("");
 				lbl.setText(solucion.getReverso());
 				btnSiguiente.setEnabled(true);

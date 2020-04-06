@@ -1,4 +1,4 @@
-package main;
+package MenusIndividuales;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -7,7 +7,9 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
-public class TriggerLeyes {
+import Jugar.JugarLeyes;
+
+public class MenuLeyes {
 	
 	public static void loadLeyes() {
 
@@ -34,7 +36,7 @@ public class TriggerLeyes {
 	
 	btnJugar.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent arg0) {
-			TriggerJugar.Jugar();
+			JugarLeyes.Jugar();
 		}
 	});
 

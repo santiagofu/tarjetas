@@ -1,4 +1,4 @@
-package main;
+package Jugar;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -6,16 +6,18 @@ import java.util.Random;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 
+import main.PantallaJuego;
 import tarjetaPckg.Tarjeta;
 
-public class TriggerJugar {
+public class JugarLeyes {
 
 	private static Tarjeta[] listado;
 	private static ArrayList<Tarjeta> mostrados;
+	private static String leyes = "leyes";
 
 	public static void Jugar() {
 		try {
-			listado = data.cargarDatos.cargar();
+			listado = data.cargarDatos.cargar(leyes);
 			PantallaJuego.jugarTarjetas(listado);
 		} catch (JsonMappingException e) {
 			// TODO Auto-generated catch block
