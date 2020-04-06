@@ -15,7 +15,7 @@ public class TriggerLeyes {
 	frmLeyes.getContentPane().setBackground(new Color(55, 184, 219));
 	frmLeyes.setTitle("Leyes");
 	frmLeyes.setBounds(600, 300, 400, 400);
-	frmLeyes.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	frmLeyes.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 	frmLeyes.getContentPane().setLayout(null);
 	
 	JButton btnAñadir = new JButton("AÑADIR LEY");

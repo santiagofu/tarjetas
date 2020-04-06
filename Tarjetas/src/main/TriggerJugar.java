@@ -12,8 +12,7 @@ public class TriggerJugar {
 	public static void Jugar() {
 		try {
 			Tarjeta[] listado = data.cargarDatos.cargar();
-			
-			System.out.println();
+			PantallaJuego.jugarTarjetas(listado);
 		} catch (JsonMappingException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -27,5 +26,24 @@ public class TriggerJugar {
 		
 		
 	}
+	
+	public static void CargarPrimeraTarjeta() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	public static Tarjeta Siguiente() {
+		return null;
+		
+		
+	}
+	
+	public static String Solucionar() {
+		return null;
+		
+		
+	}
+
+
 	}
 

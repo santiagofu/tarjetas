@@ -18,7 +18,7 @@ import java.awt.event.ActionEvent;
 
 
 
-public class interfaz_grafica {
+public class interfazInicial {
 
 	private JFrame frmTarjetas;
 
@@ -29,7 +29,7 @@ public class interfaz_grafica {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					interfaz_grafica window = new interfaz_grafica();
+					interfazInicial window = new interfazInicial();
 					window.frmTarjetas.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -41,7 +41,7 @@ public class interfaz_grafica {
 	/**
 	 * Create the application.
 	 */
-	public interfaz_grafica() {
+	public interfazInicial() {
 		initialize();
 	}
 
