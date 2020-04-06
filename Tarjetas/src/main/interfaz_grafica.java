@@ -2,10 +2,18 @@ package main;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+
+import tarjetaPckg.Tarjeta;
+
 import javax.swing.JButton;
 import java.awt.Font;
 import java.awt.Color;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.awt.event.ActionEvent;
 
 
@@ -80,7 +88,21 @@ public class interfaz_grafica {
 			
 			btnJugar.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {	
-				
+					try {
+						Tarjeta[] listado = data.cargarDatos.cargar();
+						JOptionPane.showMessageDialog(null, listado[0].getAnverso(), "Alert", JOptionPane.ERROR_MESSAGE);
+					} catch (JsonMappingException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					} catch (JsonProcessingException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					
+					
 				}
 			});
 			
