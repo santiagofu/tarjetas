@@ -1,4 +1,4 @@
-package MenusIndividuales;
+package menusIndividuales;
 
 public class MenuNTI {
 

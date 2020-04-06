@@ -5,10 +5,10 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
-import MenusIndividuales.MenuEstandares;
-import MenusIndividuales.MenuLeyes;
-import MenusIndividuales.MenuMetricaV3;
-import MenusIndividuales.MenuNTI;
+import menusIndividuales.MenuEstandares;
+import menusIndividuales.MenuLeyes;
+import menusIndividuales.MenuMetricaV3;
+import menusIndividuales.MenuNTI;
 
 import javax.swing.JButton;
 import java.awt.Font;

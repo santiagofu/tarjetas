@@ -1,4 +1,4 @@
-package MenusIndividuales;
+package menusIndividuales;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -9,7 +9,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
-import Jugar.JugarEstandares;
+import jugar.JugarEstandares;
 
 public class MenuEstandares {
 
@@ -45,7 +45,8 @@ public class MenuEstandares {
 		
 		btnJugar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				JugarEstandares.Jugar();
+				JugarEstandares j = new JugarEstandares();
+				j.Jugar();
 			}
 		});
 

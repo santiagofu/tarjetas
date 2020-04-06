@@ -1,23 +1,26 @@
-package Jugar;
+package jugar;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
+
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 
 import main.PantallaJuego;
 import tarjetaPckg.Tarjeta;
 
-public class JugarLeyes {
+public class JugarEstandares implements JugarInterface{
 
 	private static Tarjeta[] listado;
 	private static ArrayList<Tarjeta> mostrados;
-	private static String leyes = "leyes";
-
-	public static void Jugar() {
+	private static String estandares = "estandares";
+	
+	@Override
+	public void Jugar() {
+		// TODO Auto-generated method stub
 		try {
-			listado = data.cargarDatos.cargar(leyes);
+			listado = data.cargarDatos.cargar(estandares);
 			PantallaJuego.jugarTarjetas(listado);
 		} catch (JsonMappingException e) {
 			// TODO Auto-generated catch block
@@ -29,10 +32,10 @@ public class JugarLeyes {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
 	}
 
-	public static Tarjeta CargarPrimeraTarjeta() {
+	@Override
+	public Tarjeta CargarPrimeraTarjeta() {
 		// TODO Auto-generated method stub
 		mostrados = new ArrayList<Tarjeta>();
 		int index = new Random().nextInt(listado.length);
@@ -41,7 +44,8 @@ public class JugarLeyes {
 		return primera;
 	}
 
-	public static Tarjeta Siguiente() {
+	@Override
+	public Tarjeta Siguiente() {
 		if (mostrados.size() == listado.length) {
 			mostrados.clear();
 		}
@@ -56,7 +60,8 @@ public class JugarLeyes {
 
 	}
 
-	public static Tarjeta Solucionar(String texto) {
+	@Override
+	public Tarjeta Solucionar(String texto) {
 		for (Tarjeta t : listado) {
 			if (t.getAnverso().compareTo(texto) == 0) {
 				return t;
@@ -65,5 +70,7 @@ public class JugarLeyes {
 		return null;
 
 	}
+
+	
 
 }

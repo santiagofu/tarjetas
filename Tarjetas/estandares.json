@@ -1,0 +1,152 @@
+[
+{
+	"categoria": "Estandar",
+	"anverso": "802.1",
+	"reverso": "802.1 Protocolos LAN de nivel superior."
+},
+
+{
+	"categoria": "Estandar",
+	"anverso": "802.2",
+	"reverso": "802.2 Logical Link Control (ianctivo)."
+},
+
+{
+	"categoria": "Estandar",
+	"anverso": "802.3",
+	"reverso": "802.3 CSMA/CD (Ethernet) (activo)."
+},
+
+{
+	"categoria": "Estandar",
+	"anverso": "802.4",
+	"reverso": "802.4 Token Bus (disuelto)."
+},
+
+{
+	"categoria": "Estandar",
+	"anverso": "802.5",
+	"reverso": "802.5 Token Ring (inactivo)."
+},
+
+{
+	"categoria": "Estandar",
+	"anverso": "802.6",
+	"reverso": "802.6 Distributed Queued Dual Bus MAN (disuelto)."
+},
+
+{
+	"categoria": "Estandar",
+	"anverso": "802.7",
+	"reverso": "802.7 Grupo asesor en banda ancha (disuelto)."
+},
+
+{
+	"categoria": "Estandar",
+	"anverso": "802.8",
+	"reverso": "802.8 Grupo asesor en fibras ópticas (disuelto)."
+},
+
+{
+	"categoria": "Estandar",
+	"anverso": "802.9",
+	"reverso": "802.9 Servicios integrados voz y datos (Iso-Ethernet) (disuelto)."
+},
+
+{
+	"categoria": "Estandar",
+	"anverso": "802.10",
+	"reverso": "802.10 Seguridad en estándares IEEE (disuelto)."
+},
+
+{
+	"categoria": "Estandar",
+	"anverso": "802.11",
+	"reverso": "802.11 Wireless LAN (activo)."
+},
+
+{
+	"categoria": "Estandar",
+	"anverso": "802.12",
+	"reverso": "802.12 Demand Priority 100VG-AnyLAN (disuelto)."
+},
+
+{
+	"categoria": "Estandar",
+	"anverso": "802.14",
+	"reverso": "802.14 Redes CATV (disuelto)."
+},
+
+{
+	"categoria": "Estandar",
+	"anverso": "802.15",
+	"reverso": "802.15 Wireless Personal Area Networks (WPAN) (activo)."
+},
+
+{
+	"categoria": "Estandar",
+	"anverso": "802.16",
+	"reverso": "802.16 Broadband Wireless Access (BWA) (activo)."
+},
+
+{
+	"categoria": "Estandar",
+	"anverso": "802.17",
+	"reverso": "802.17 Resilient Packet Ring (RPR) (activo)."
+},
+
+{
+	"categoria": "Estandar",
+	"anverso": "802.18",
+	"reverso": "802.18 Grupo asesor en regulación radioeléctrica (activo)."
+},
+
+{
+	"categoria": "Estandar",
+	"anverso": "802.19",
+	"reverso": "802.19 Grupo asesor para la coexistencia de estándares 802 (activo)."
+},
+
+{
+	"categoria": "Estandar",
+	"anverso": "802.20",
+	"reverso": "802.20 Mobile Broadband Wireless Access (MBWA) (activo)."
+},
+
+{
+	"categoria": "Estandar",
+	"anverso": "802.21",
+	"reverso": "802.21 Traspaso/Interoperabilidad entre redes (activo)."
+},
+
+{
+	"categoria": "Estandar",
+	"anverso": "802.22",
+	"reverso": "802.22 Wireless Regional Area Networks (WRAN) (activo)."
+},
+
+{
+	"categoria": "Estandar",
+	"anverso": "UNE-ISO 15489-1:2016",
+	"reverso": "UNE-ISO 15489-1:2016. Información y documentación. Gestión documental."
+},
+
+{
+	"categoria": "Estandar",
+	"anverso": "ISO 12207",
+	"reverso": "ISO 12207 Procesos del Ciclo de Vida de Software."
+},
+
+{
+	"categoria": "Estandar",
+	"anverso": "ISO/IEC2 7000:2018",
+	"reverso": "ISO/IEC 27000:2018 Vocabulario estándar para el SGSI."
+},
+
+{
+	"categoria": "Estandar",
+	"anverso": "ISO/IEC 27001:2013",
+	"reverso": "ISO/IEC 27001:2013 Seguridad de la Información. PDCA."
+}
+
+]
