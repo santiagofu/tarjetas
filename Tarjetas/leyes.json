@@ -1,7 +1,68 @@
 [
 {
 	"categoria": "Ley",
-	"anverso": "39/2015",
-	"reverso": "Ley 39/2015 Procedimiento administrativo comun"
+	"anverso": "Ley 39/2015",
+	"reverso": "Ley 39/2015 Procedimiento administrativo común"
+},
+
+{
+	"categoria": "Ley",
+	"anverso": "Ley 40/2015",
+	"reverso": "Ley 40/2015 Regimen Jurídico de la Administración"
+},
+
+{
+	"categoria": "Ley",
+	"anverso": "Real Decreto 3/2010",
+	"reverso": "Real Decreto 3/2010 Esquema Nacional de Seguridad"
+},
+
+{
+	"categoria": "Ley",
+	"anverso": "Ley 19/2013",
+	"reverso": "Ley 19/2013 de Transparencia, Acceso a la información pública y Buen gobierno."
+},
+
+{
+	"categoria": "Ley",
+	"anverso": "Ley 37/2007",
+	"reverso": "Ley 37/2007 Reutilización de la Información del Sector Público"
+},
+
+{
+	"categoria": "Ley",
+	"anverso": "Reglamento UE 2016/679",
+	"reverso": "Reglamento UE 2016/679 Reglamento General de Protección de Datos"
+},
+
+{
+	"categoria": "Ley",
+	"anverso": "Ley Orgánica 3/2018",
+	"reverso": "Ley Orgánica 3/2018 de Protección de Datos Personales y Garantía de Derechos Digitales"
+},
+
+{
+	"categoria": "Ley",
+	"anverso": "Ley 9/2017",
+	"reverso": "Ley 9/2017 Contratos del Sector Público"
+},
+
+{
+	"categoria": "Ley",
+	"anverso": "Reglamento UE 2014/910",
+	"reverso": "Reglamento UE 2014/910 eIDAS (sistema europeo de reconocimiento de identidades electrónicas)"
+},
+
+{
+	"categoria": "Ley",
+	"anverso": "Ley 14/2010",
+	"reverso": "Ley 14/2010 sobre las infraestructuras y los servicios de información geográfica en España (LISIGE)"
+},
+
+{
+	"categoria": "Ley",
+	"anverso": "Real Decreto Legislativo 5/2015",
+	"reverso": "Real Decreto Legislativo 5/2015 Estatuto del Empleado Publico (EBEP)"
 }
+
 ]

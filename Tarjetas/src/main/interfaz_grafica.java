@@ -65,47 +65,7 @@ public class interfaz_grafica {
 	
 	btnLeyes.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent arg0) {
-			JFrame frmLeyes = new JFrame();
-			frmLeyes.getContentPane().setBackground(new Color(55, 184, 219));
-			frmLeyes.setTitle("Leyes");
-			frmLeyes.setBounds(600, 300, 400, 400);
-			frmLeyes.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-			frmLeyes.getContentPane().setLayout(null);
-			
-			JButton btnAñadir = new JButton("AÑADIR LEY");
-			btnAñadir.setBackground(Color.LIGHT_GRAY);
-			btnAñadir.setFont(new Font("Arial", Font.BOLD, 20));
-			btnAñadir.setBounds(100, 100, 202, 49);
-			frmLeyes.getContentPane().add(btnAñadir);
-			
-			JButton btnJugar = new JButton("JUGAR");
-			btnJugar.setBackground(Color.LIGHT_GRAY);
-			btnJugar.setFont(new Font("Arial", Font.BOLD, 20));
-			btnJugar.setBounds(100, 200, 202, 49);
-			frmLeyes.getContentPane().add(btnJugar);
-			
-			frmLeyes.setVisible(true);
-			
-			btnJugar.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent arg0) {	
-					try {
-						Tarjeta[] listado = data.cargarDatos.cargar();
-						JOptionPane.showMessageDialog(null, listado[0].getAnverso(), "Alert", JOptionPane.ERROR_MESSAGE);
-					} catch (JsonMappingException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					} catch (JsonProcessingException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					} catch (IOException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-					
-					
-				}
-			});
-			
+			TriggerLeyes.loadLeyes();
 		}
 	});
 	

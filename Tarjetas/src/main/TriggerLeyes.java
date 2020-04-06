@@ -1,0 +1,46 @@
+package main;
+
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class TriggerLeyes {
+	
+	public static void loadLeyes() {
+
+	JFrame frmLeyes = new JFrame();
+	frmLeyes.getContentPane().setBackground(new Color(55, 184, 219));
+	frmLeyes.setTitle("Leyes");
+	frmLeyes.setBounds(600, 300, 400, 400);
+	frmLeyes.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	frmLeyes.getContentPane().setLayout(null);
+	
+	JButton btnAñadir = new JButton("AÑADIR LEY");
+	btnAñadir.setBackground(Color.LIGHT_GRAY);
+	btnAñadir.setFont(new Font("Arial", Font.BOLD, 20));
+	btnAñadir.setBounds(100, 100, 202, 49);
+	frmLeyes.getContentPane().add(btnAñadir);
+	
+	JButton btnJugar = new JButton("JUGAR");
+	btnJugar.setBackground(Color.LIGHT_GRAY);
+	btnJugar.setFont(new Font("Arial", Font.BOLD, 20));
+	btnJugar.setBounds(100, 200, 202, 49);
+	frmLeyes.getContentPane().add(btnJugar);
+	
+	frmLeyes.setVisible(true);
+	
+	btnJugar.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent arg0) {
+			TriggerJugar.Jugar();
+		}
+	});
+
+	}
+
+	}
+
+
+	
