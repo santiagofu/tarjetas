@@ -43,25 +43,39 @@ public class interfaz_grafica {
 		frmTarjetas = new JFrame();
 		frmTarjetas.getContentPane().setBackground(new Color(135, 206, 235));
 		frmTarjetas.setTitle("Tarjetas");
-		frmTarjetas.setBounds(100, 100, 804, 600);
+		frmTarjetas.setBounds(400, 200, 800, 600);
 		frmTarjetas.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmTarjetas.getContentPane().setLayout(null);
 		
 		JButton btnLeyes = new JButton("LEYES");
-		btnLeyes.setBackground(new Color(255, 165, 0));
-		btnLeyes.setFont(new Font("Arial", Font.BOLD, 15));
-		btnLeyes.setBounds(267, 158, 202, 49);
+		btnLeyes.setBackground(Color.LIGHT_GRAY);
+		btnLeyes.setFont(new Font("Arial", Font.BOLD, 20));
+		btnLeyes.setBounds(272, 230, 202, 49);
 		frmTarjetas.getContentPane().add(btnLeyes);
-		
-		JButton btnEstandares = new JButton("EST\u00C1NDARES");
-		btnEstandares.setFont(new Font("Arial", Font.BOLD, 15));
-		btnEstandares.setBounds(267, 335, 202, 49);
-		frmTarjetas.getContentPane().add(btnEstandares);
 
 	
 	btnLeyes.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent arg0) {
+			JFrame frmLeyes = new JFrame();
+			frmLeyes.getContentPane().setBackground(new Color(55, 184, 219));
+			frmLeyes.setTitle("Leyes");
+			frmLeyes.setBounds(600, 300, 400, 400);
+			frmLeyes.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			frmLeyes.getContentPane().setLayout(null);
 			
+			JButton btnAñadir = new JButton("AÑADIR LEY");
+			btnAñadir.setBackground(Color.LIGHT_GRAY);
+			btnAñadir.setFont(new Font("Arial", Font.BOLD, 20));
+			btnAñadir.setBounds(100, 100, 202, 49);
+			frmLeyes.getContentPane().add(btnAñadir);
+			
+			JButton btnJugar = new JButton("JUGAR");
+			btnJugar.setBackground(Color.LIGHT_GRAY);
+			btnJugar.setFont(new Font("Arial", Font.BOLD, 20));
+			btnJugar.setBounds(100, 200, 202, 49);
+			frmLeyes.getContentPane().add(btnJugar);
+			
+			frmLeyes.setVisible(true);
 		}
 	});
 	
