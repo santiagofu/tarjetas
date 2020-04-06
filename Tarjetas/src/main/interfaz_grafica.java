@@ -1,5 +1,4 @@
 package main;
-
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -8,6 +7,8 @@ import java.awt.Font;
 import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+
+
 
 public class interfaz_grafica {
 
@@ -76,6 +77,13 @@ public class interfaz_grafica {
 			frmLeyes.getContentPane().add(btnJugar);
 			
 			frmLeyes.setVisible(true);
+			
+			btnJugar.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {	
+				
+				}
+			});
+			
 		}
 	});
 	
