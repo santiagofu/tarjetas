@@ -19,7 +19,7 @@ public class PantallaJuego {
 
 		JFrame frmJuegoTarjetas = new JFrame();
 		frmJuegoTarjetas.getContentPane().setBackground(new Color(55, 184, 219));
-		frmJuegoTarjetas.setTitle("Tarjetas de Leyes");
+		frmJuegoTarjetas.setTitle("Tarjetas");
 		frmJuegoTarjetas.setBounds(500, 250, 700, 500);
 		frmJuegoTarjetas.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frmJuegoTarjetas.getContentPane().setLayout(null);
