@@ -1,6 +1,7 @@
 package main;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Random;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
@@ -8,8 +9,9 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import tarjetaPckg.Tarjeta;
 
 public class TriggerJugar {
-	
+
 	private static Tarjeta[] listado;
+	private static ArrayList<Tarjeta> mostrados;
 
 	public static void Jugar() {
 		try {
@@ -25,27 +27,41 @@ public class TriggerJugar {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
+
 	}
-	
+
 	public static Tarjeta CargarPrimeraTarjeta() {
 		// TODO Auto-generated method stub
+		mostrados = new ArrayList<Tarjeta>();
 		int index = new Random().nextInt(listado.length);
-		return listado[index];
+		Tarjeta primera = listado[index];
+		mostrados.add(primera);
+		return primera;
 	}
-	
+
 	public static Tarjeta Siguiente() {
-		return null;
-		
+		if (mostrados.size() == listado.length) {
+			mostrados.clear();
+		}
+		int index = new Random().nextInt(listado.length);
+
+		while (mostrados.contains(listado[index])) {
+			index = new Random().nextInt(listado.length);
+		}
+
+		mostrados.add(listado[index]);
+		return listado[index];
+
 	}
-	
+
 	public static Tarjeta Solucionar(String texto) {
+		for (Tarjeta t : listado) {
+			if (t.getAnverso().compareTo(texto) == 0) {
+				return t;
+			}
+		}
 		return null;
-		
-		
-	}
-
 
 	}
 
+}
