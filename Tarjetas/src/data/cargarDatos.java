@@ -13,11 +13,13 @@ public class cargarDatos {
 		ObjectMapper mapper = new ObjectMapper();
 		Tarjeta[] tarjetas = null;
 		if(categoria.compareTo("leyes")==0) {
-			return tarjetas = mapper.readValue(new File("leyes.json"), Tarjeta[].class);
+			tarjetas = mapper.readValue(new File("leyes.json"), Tarjeta[].class);
+			return tarjetas;
 		} 
 		
 		if(categoria.compareTo("estandares")==0) {
-			return tarjetas = mapper.readValue(new File("estandares.json"), Tarjeta[].class);
+			tarjetas = mapper.readValue(new File("estandares.json"), Tarjeta[].class);
+			return tarjetas;
 		}
 		return tarjetas;
 	}

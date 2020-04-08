@@ -44,7 +44,7 @@ public class MenuLeyes {
 	btnJugar.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent arg0) {
 			JugarLeyes jg = new JugarLeyes();
-			jg.Jugar();
+			jg.jugar();
 		}
 	});
 

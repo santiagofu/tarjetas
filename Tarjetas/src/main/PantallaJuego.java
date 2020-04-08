@@ -50,7 +50,7 @@ public class PantallaJuego {
 		String categoria = listado[0].getCategoria();
 		if(categoria.compareTo("Ley")==0) {
 			JugarLeyes j = new JugarLeyes();
-			Tarjeta inicial = j.CargarPrimeraTarjeta();
+			Tarjeta inicial = j.cargarPrimeraTarjeta();
 			lbl.setText(inicial.getAnverso().toString());
 
 			PantallaJuego.texto = lbl.getText();
@@ -61,7 +61,7 @@ public class PantallaJuego {
 				public void actionPerformed(ActionEvent arg0) {
 					btnSiguiente.setEnabled(false);
 					btnSolucionar.setEnabled(false);
-					Tarjeta siguiente = j.Siguiente();
+					Tarjeta siguiente = j.siguiente();
 					lbl.setText("");
 					lbl.setText(siguiente.getAnverso());
 					btnSiguiente.setEnabled(true);
@@ -74,7 +74,7 @@ public class PantallaJuego {
 					btnSiguiente.setEnabled(false);
 					btnSolucionar.setEnabled(false);
 					PantallaJuego.texto = lbl.getText();
-					Tarjeta solucion = j.Solucionar(PantallaJuego.texto);
+					Tarjeta solucion = j.solucionar(PantallaJuego.texto);
 					lbl.setText("");
 					lbl.setText(solucion.getReverso());
 					btnSiguiente.setEnabled(true);
@@ -83,7 +83,7 @@ public class PantallaJuego {
 		}
 		if(categoria.compareTo("Estandar")==0) {
 			JugarEstandares e = new JugarEstandares();
-			Tarjeta inicial = e.CargarPrimeraTarjeta();
+			Tarjeta inicial = e.cargarPrimeraTarjeta();
 			lbl.setText(inicial.getAnverso().toString());
 
 			PantallaJuego.texto = lbl.getText();
@@ -94,7 +94,7 @@ public class PantallaJuego {
 				public void actionPerformed(ActionEvent arg0) {
 					btnSiguiente.setEnabled(false);
 					btnSolucionar.setEnabled(false);
-					Tarjeta siguiente = e.Siguiente();
+					Tarjeta siguiente = e.siguiente();
 					lbl.setText("");
 					lbl.setText(siguiente.getAnverso());
 					btnSiguiente.setEnabled(true);
@@ -107,7 +107,7 @@ public class PantallaJuego {
 					btnSiguiente.setEnabled(false);
 					btnSolucionar.setEnabled(false);
 					PantallaJuego.texto = lbl.getText();
-					Tarjeta solucion = e.Solucionar(PantallaJuego.texto);
+					Tarjeta solucion = e.solucionar(PantallaJuego.texto);
 					lbl.setText("");
 					lbl.setText(solucion.getReverso());
 					btnSiguiente.setEnabled(true);

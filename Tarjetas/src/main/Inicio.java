@@ -51,7 +51,7 @@ public class Inicio {
 		frmTarjetas.getContentPane().setBackground(new Color(135, 206, 235));
 		frmTarjetas.setTitle("Tarjetas");
 		frmTarjetas.setBounds(400, 200, 800, 600);
-		frmTarjetas.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmTarjetas.setDefaultCloseOperation(3);
 		frmTarjetas.getContentPane().setLayout(null);
 
 		JButton btnLeyes = new JButton("LEYES");

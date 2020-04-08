@@ -46,7 +46,7 @@ public class MenuEstandares {
 		btnJugar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				JugarEstandares j = new JugarEstandares();
-				j.Jugar();
+				j.jugar();
 			}
 		});
 

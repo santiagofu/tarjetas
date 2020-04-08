@@ -4,11 +4,12 @@ import tarjetaPckg.Tarjeta;
 
 public interface JugarInterface {
 
-	public void Jugar();
+	public void jugar();
 
-	public Tarjeta CargarPrimeraTarjeta();
+	public Tarjeta cargarPrimeraTarjeta();
 
-	public Tarjeta Siguiente();
+	public Tarjeta siguiente();
 
-	public Tarjeta Solucionar(String texto);
+	public Tarjeta solucionar(String texto);
+
 }
