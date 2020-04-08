@@ -18,51 +18,46 @@ public class JugarEstandares implements JugarInterface{
 	
 	@Override
 	public void Jugar() {
-		// TODO Auto-generated method stub
 		try {
-			listado = data.cargarDatos.cargar(estandares);
-			PantallaJuego.jugarTarjetas(listado);
+			JugarEstandares.listado = data.cargarDatos.cargar(JugarEstandares.estandares);
+			PantallaJuego.jugarTarjetas(JugarEstandares.listado);
 		} catch (JsonMappingException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (JsonProcessingException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 
 	@Override
 	public Tarjeta CargarPrimeraTarjeta() {
-		// TODO Auto-generated method stub
-		mostrados = new ArrayList<Tarjeta>();
-		int index = new Random().nextInt(listado.length);
-		Tarjeta primera = listado[index];
-		mostrados.add(primera);
+		JugarEstandares.mostrados = new ArrayList<Tarjeta>();
+		int index = new Random().nextInt(JugarEstandares.listado.length);
+		Tarjeta primera = JugarEstandares.listado[index];
+		JugarEstandares.mostrados.add(primera);
 		return primera;
 	}
 
 	@Override
 	public Tarjeta Siguiente() {
-		if (mostrados.size() == listado.length) {
-			mostrados.clear();
+		if (JugarEstandares.mostrados.size() == JugarEstandares.listado.length) {
+			JugarEstandares.mostrados.clear();
 		}
-		int index = new Random().nextInt(listado.length);
+		int index = new Random().nextInt(JugarEstandares.listado.length);
 
-		while (mostrados.contains(listado[index])) {
-			index = new Random().nextInt(listado.length);
+		while (JugarEstandares.mostrados.contains(JugarEstandares.listado[index])) {
+			index = new Random().nextInt(JugarEstandares.listado.length);
 		}
 
-		mostrados.add(listado[index]);
-		return listado[index];
+		JugarEstandares.mostrados.add(JugarEstandares.listado[index]);
+		return JugarEstandares.listado[index];
 
 	}
 
 	@Override
 	public Tarjeta Solucionar(String texto) {
-		for (Tarjeta t : listado) {
+		for (Tarjeta t : JugarEstandares.listado) {
 			if (t.getAnverso().compareTo(texto) == 0) {
 				return t;
 			}

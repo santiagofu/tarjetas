@@ -23,7 +23,7 @@ public class PantallaJuego {
 		frmJuegoTarjetas.getContentPane().setBackground(new Color(55, 184, 219));
 		frmJuegoTarjetas.setTitle("Tarjetas");
 		frmJuegoTarjetas.setBounds(500, 250, 700, 500);
-		frmJuegoTarjetas.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		frmJuegoTarjetas.setDefaultCloseOperation(2);
 		frmJuegoTarjetas.getContentPane().setLayout(null);
 
 		JTextArea lbl = new JTextArea("");
@@ -53,7 +53,7 @@ public class PantallaJuego {
 			Tarjeta inicial = j.CargarPrimeraTarjeta();
 			lbl.setText(inicial.getAnverso().toString());
 
-			texto = lbl.getText();
+			PantallaJuego.texto = lbl.getText();
 
 			frmJuegoTarjetas.setVisible(true);
 
@@ -73,8 +73,8 @@ public class PantallaJuego {
 				public void actionPerformed(ActionEvent arg0) {
 					btnSiguiente.setEnabled(false);
 					btnSolucionar.setEnabled(false);
-					texto = lbl.getText();
-					Tarjeta solucion = j.Solucionar(texto);
+					PantallaJuego.texto = lbl.getText();
+					Tarjeta solucion = j.Solucionar(PantallaJuego.texto);
 					lbl.setText("");
 					lbl.setText(solucion.getReverso());
 					btnSiguiente.setEnabled(true);
@@ -86,7 +86,7 @@ public class PantallaJuego {
 			Tarjeta inicial = e.CargarPrimeraTarjeta();
 			lbl.setText(inicial.getAnverso().toString());
 
-			texto = lbl.getText();
+			PantallaJuego.texto = lbl.getText();
 
 			frmJuegoTarjetas.setVisible(true);
 
@@ -106,8 +106,8 @@ public class PantallaJuego {
 				public void actionPerformed(ActionEvent arg0) {
 					btnSiguiente.setEnabled(false);
 					btnSolucionar.setEnabled(false);
-					texto = lbl.getText();
-					Tarjeta solucion = e.Solucionar(texto);
+					PantallaJuego.texto = lbl.getText();
+					Tarjeta solucion = e.Solucionar(PantallaJuego.texto);
 					lbl.setText("");
 					lbl.setText(solucion.getReverso());
 					btnSiguiente.setEnabled(true);

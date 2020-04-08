@@ -1,7 +1,5 @@
 package jugar;
 
-import java.util.ArrayList;
-
 import tarjetaPckg.Tarjeta;
 
 public interface JugarInterface {

@@ -20,7 +20,7 @@ public class MenuEstandares {
 		frmEstandares.getContentPane().setBackground(new Color(55, 184, 219));
 		frmEstandares.setTitle("Estándares");
 		frmEstandares.setBounds(600, 300, 400, 400);
-		frmEstandares.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		frmEstandares.setDefaultCloseOperation(2);
 		frmEstandares.getContentPane().setLayout(null);
 		
 		JButton btnAñadir = new JButton("AÑADIR ESTÁNDAR");

@@ -18,7 +18,7 @@ public class MenuLeyes {
 	frmLeyes.getContentPane().setBackground(new Color(55, 184, 219));
 	frmLeyes.setTitle("Leyes");
 	frmLeyes.setBounds(600, 300, 400, 400);
-	frmLeyes.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+	frmLeyes.setDefaultCloseOperation(2);
 	frmLeyes.getContentPane().setLayout(null);
 	
 	JButton btnAñadir = new JButton("AÑADIR LEY");

@@ -9,7 +9,7 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import main.PantallaJuego;
 import tarjetaPckg.Tarjeta;
 
-public class JugarLeyes implements JugarInterface{
+public class JugarLeyes implements JugarInterface {
 
 	private static Tarjeta[] listado;
 	private static ArrayList<Tarjeta> mostrados;
@@ -18,16 +18,13 @@ public class JugarLeyes implements JugarInterface{
 	@Override
 	public void Jugar() {
 		try {
-			listado = data.cargarDatos.cargar(leyes);
-			PantallaJuego.jugarTarjetas(listado);
+			JugarLeyes.listado = data.cargarDatos.cargar(leyes);
+			PantallaJuego.jugarTarjetas(JugarLeyes.listado);
 		} catch (JsonMappingException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (JsonProcessingException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -35,33 +32,32 @@ public class JugarLeyes implements JugarInterface{
 
 	@Override
 	public Tarjeta CargarPrimeraTarjeta() {
-		// TODO Auto-generated method stub
-		mostrados = new ArrayList<Tarjeta>();
-		int index = new Random().nextInt(listado.length);
-		Tarjeta primera = listado[index];
-		mostrados.add(primera);
+		JugarLeyes.mostrados = new ArrayList<Tarjeta>();
+		int index = new Random().nextInt(JugarLeyes.listado.length);
+		Tarjeta primera = JugarLeyes.listado[index];
+		JugarLeyes.mostrados.add(primera);
 		return primera;
 	}
 
 	@Override
 	public Tarjeta Siguiente() {
-		if (mostrados.size() == listado.length) {
-			mostrados.clear();
+		if (JugarLeyes.mostrados.size() == JugarLeyes.listado.length) {
+			JugarLeyes.mostrados.clear();
 		}
-		int index = new Random().nextInt(listado.length);
+		int index = new Random().nextInt(JugarLeyes.listado.length);
 
-		while (mostrados.contains(listado[index])) {
-			index = new Random().nextInt(listado.length);
+		while (JugarLeyes.mostrados.contains(JugarLeyes.listado[index])) {
+			index = new Random().nextInt(JugarLeyes.listado.length);
 		}
 
-		mostrados.add(listado[index]);
-		return listado[index];
+		mostrados.add(JugarLeyes.listado[index]);
+		return JugarLeyes.listado[index];
 
 	}
 
 	@Override
 	public Tarjeta Solucionar(String texto) {
-		for (Tarjeta t : listado) {
+		for (Tarjeta t : JugarLeyes.listado) {
 			if (t.getAnverso().compareTo(texto) == 0) {
 				return t;
 			}
