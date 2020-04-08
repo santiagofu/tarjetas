@@ -6,24 +6,22 @@ import java.util.Random;
 import main.PantallaJuego;
 import tarjetaPckg.Tarjeta;
 
-public class JugarLeyes implements JugarInterface {
+public class JugarLeyes {
 
 	private static Tarjeta[] listado;
 	private static ArrayList<Tarjeta> mostrados;
 	private static String leyes = "leyes";
 
-	@Override
 	public void jugar() {
 		try {
 			JugarLeyes.listado = data.cargarDatos.cargar(leyes);
 			PantallaJuego.jugarTarjetas(JugarLeyes.listado);
 		} catch (IOException e) {
-		e.printStackTrace();
+			e.printStackTrace();
 		}
 
 	}
 
-	@Override
 	public Tarjeta cargarPrimeraTarjeta() {
 		JugarLeyes.mostrados = new ArrayList<Tarjeta>();
 		int index = new Random().nextInt(JugarLeyes.listado.length);
@@ -32,7 +30,6 @@ public class JugarLeyes implements JugarInterface {
 		return primera;
 	}
 
-	@Override
 	public Tarjeta siguiente() {
 		if (JugarLeyes.mostrados.size() == JugarLeyes.listado.length) {
 			JugarLeyes.mostrados.clear();
@@ -48,7 +45,6 @@ public class JugarLeyes implements JugarInterface {
 
 	}
 
-	@Override
 	public Tarjeta solucionar(String texto) {
 		for (Tarjeta t : JugarLeyes.listado) {
 			if (t.getAnverso().compareTo(texto) == 0) {

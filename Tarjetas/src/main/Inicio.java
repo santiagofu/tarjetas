@@ -76,30 +76,22 @@ public class Inicio {
 		btnMetrica3.setBounds(272, 407, 202, 49);
 		frmTarjetas.getContentPane().add(btnMetrica3);
 
-		btnLeyes.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
+		btnLeyes.addActionListener(e -> {
 				MenuLeyes.loadLeyes();
-			}
 		});
 
-		btnEstandares.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+		btnEstandares.addActionListener(e -> {
 				MenuEstandares.loadEstandares();
-			}
 		});
 		
-		btnNTI.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+		btnNTI.addActionListener(e -> {
 				//MenuNTI.loadNTI();
 				JOptionPane.showMessageDialog(null,"Aún en desarrollo","",JOptionPane.WARNING_MESSAGE);
-			}
 		});
 		
-		btnMetrica3.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+		btnMetrica3.addActionListener(e -> {
 				//MenuMetricaV3.loadMetricaV3();
 				JOptionPane.showMessageDialog(null,"Aún en desarrollo","",JOptionPane.WARNING_MESSAGE);
-			}
 		});
 
 	}
