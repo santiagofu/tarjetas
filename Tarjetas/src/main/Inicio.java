@@ -10,8 +10,6 @@ import menusIndividuales.MenuLeyes;
 import javax.swing.JButton;
 import java.awt.Font;
 import java.awt.Color;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
 public class Inicio {
 
