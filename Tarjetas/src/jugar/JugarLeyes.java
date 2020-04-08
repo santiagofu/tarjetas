@@ -1,8 +1,8 @@
 package jugar;
 
 import java.io.IOException;
+import java.security.SecureRandom;
 import java.util.ArrayList;
-import java.util.Random;
 import main.PantallaJuego;
 import tarjetaPckg.Tarjeta;
 
@@ -24,7 +24,7 @@ public class JugarLeyes {
 
 	public Tarjeta cargarPrimeraTarjeta() {
 		JugarLeyes.mostrados = new ArrayList<Tarjeta>();
-		int index = new Random().nextInt(JugarLeyes.listado.length);
+		int index = new SecureRandom().nextInt(JugarLeyes.listado.length);
 		Tarjeta primera = JugarLeyes.listado[index];
 		JugarLeyes.mostrados.add(primera);
 		return primera;
@@ -34,10 +34,10 @@ public class JugarLeyes {
 		if (JugarLeyes.mostrados.size() == JugarLeyes.listado.length) {
 			JugarLeyes.mostrados.clear();
 		}
-		int index = new Random().nextInt(JugarLeyes.listado.length);
+		int index = new SecureRandom().nextInt(JugarLeyes.listado.length);
 
 		while (JugarLeyes.mostrados.contains(JugarLeyes.listado[index])) {
-			index = new Random().nextInt(JugarLeyes.listado.length);
+			index = new SecureRandom().nextInt(JugarLeyes.listado.length);
 		}
 
 		mostrados.add(JugarLeyes.listado[index]);

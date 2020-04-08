@@ -1,9 +1,8 @@
 package jugar;
 
 import java.io.IOException;
+import java.security.SecureRandom;
 import java.util.ArrayList;
-import java.util.Random;
-
 import main.PantallaJuego;
 import tarjetaPckg.Tarjeta;
 
@@ -23,7 +22,7 @@ public class JugarEstandares{
 	}
 	public Tarjeta cargarPrimeraTarjeta() {
 		JugarEstandares.mostrados = new ArrayList<Tarjeta>();
-		int index = new Random().nextInt(JugarEstandares.listado.length);
+		int index = new SecureRandom().nextInt(JugarEstandares.listado.length);
 		Tarjeta primera = JugarEstandares.listado[index];
 		JugarEstandares.mostrados.add(primera);
 		return primera;
@@ -33,10 +32,10 @@ public class JugarEstandares{
 		if (JugarEstandares.mostrados.size() == JugarEstandares.listado.length) {
 			JugarEstandares.mostrados.clear();
 		}
-		int index = new Random().nextInt(JugarEstandares.listado.length);
+		int index = new SecureRandom().nextInt(JugarEstandares.listado.length);
 
 		while (JugarEstandares.mostrados.contains(JugarEstandares.listado[index])) {
-			index = new Random().nextInt(JugarEstandares.listado.length);
+			index = new SecureRandom().nextInt(JugarEstandares.listado.length);
 		}
 
 		JugarEstandares.mostrados.add(JugarEstandares.listado[index]);
