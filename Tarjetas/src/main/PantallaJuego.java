@@ -46,75 +46,66 @@ public class PantallaJuego {
 		btnSolucionar.setFont(new Font("Arial", Font.BOLD, 20));
 		btnSolucionar.setBounds(400, 350, 200, 50);
 		frmJuegoTarjetas.getContentPane().add(btnSolucionar);
-		
+
 		String categoria = listado[0].getCategoria();
-		if(categoria.compareTo("Ley")==0) {
+		if (categoria.compareTo("Ley") == 0) {
 			JugarLeyes j = new JugarLeyes();
 			Tarjeta inicial = j.cargarPrimeraTarjeta();
-			lbl.setText(inicial.getAnverso().toString());
+			lbl.setText(inicial.getAnverso());
 
 			PantallaJuego.texto = lbl.getText();
 
 			frmJuegoTarjetas.setVisible(true);
 
-			btnSiguiente.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent arg0) {
-					btnSiguiente.setEnabled(false);
-					btnSolucionar.setEnabled(false);
-					Tarjeta siguiente = j.siguiente();
-					lbl.setText("");
-					lbl.setText(siguiente.getAnverso());
-					btnSiguiente.setEnabled(true);
-					btnSolucionar.setEnabled(true);
-				}
+			btnSiguiente.addActionListener(e -> {
+				btnSiguiente.setEnabled(false);
+				btnSolucionar.setEnabled(false);
+				Tarjeta siguiente = j.siguiente();
+				lbl.setText("");
+				lbl.setText(siguiente.getAnverso());
+				btnSiguiente.setEnabled(true);
+				btnSolucionar.setEnabled(true);
 			});
 
-			btnSolucionar.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent arg0) {
-					btnSiguiente.setEnabled(false);
-					btnSolucionar.setEnabled(false);
-					PantallaJuego.texto = lbl.getText();
-					Tarjeta solucion = j.solucionar(PantallaJuego.texto);
-					lbl.setText("");
-					lbl.setText(solucion.getReverso());
-					btnSiguiente.setEnabled(true);
-				}
+			btnSolucionar.addActionListener(e -> {
+				btnSiguiente.setEnabled(false);
+				btnSolucionar.setEnabled(false);
+				PantallaJuego.texto = lbl.getText();
+				Tarjeta solucion = j.solucionar(PantallaJuego.texto);
+				lbl.setText("");
+				lbl.setText(solucion.getReverso());
+				btnSiguiente.setEnabled(true);
 			});
 		}
-		if(categoria.compareTo("Estandar")==0) {
+		if (categoria.compareTo("Estandar") == 0) {
 			JugarEstandares e = new JugarEstandares();
 			Tarjeta inicial = e.cargarPrimeraTarjeta();
-			lbl.setText(inicial.getAnverso().toString());
+			lbl.setText(inicial.getAnverso());
 
 			PantallaJuego.texto = lbl.getText();
 
 			frmJuegoTarjetas.setVisible(true);
 
-			btnSiguiente.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent arg0) {
-					btnSiguiente.setEnabled(false);
-					btnSolucionar.setEnabled(false);
-					Tarjeta siguiente = e.siguiente();
-					lbl.setText("");
-					lbl.setText(siguiente.getAnverso());
-					btnSiguiente.setEnabled(true);
-					btnSolucionar.setEnabled(true);
-				}
+			btnSiguiente.addActionListener(evt -> {
+				btnSiguiente.setEnabled(false);
+				btnSolucionar.setEnabled(false);
+				Tarjeta siguiente = e.siguiente();
+				lbl.setText("");
+				lbl.setText(siguiente.getAnverso());
+				btnSiguiente.setEnabled(true);
+				btnSolucionar.setEnabled(true);
 			});
 
-			btnSolucionar.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent arg0) {
-					btnSiguiente.setEnabled(false);
-					btnSolucionar.setEnabled(false);
-					PantallaJuego.texto = lbl.getText();
-					Tarjeta solucion = e.solucionar(PantallaJuego.texto);
-					lbl.setText("");
-					lbl.setText(solucion.getReverso());
-					btnSiguiente.setEnabled(true);
-				}
+			btnSolucionar.addActionListener(evt -> {
+				btnSiguiente.setEnabled(false);
+				btnSolucionar.setEnabled(false);
+				PantallaJuego.texto = lbl.getText();
+				Tarjeta solucion = e.solucionar(PantallaJuego.texto);
+				lbl.setText("");
+				lbl.setText(solucion.getReverso());
+				btnSiguiente.setEnabled(true);
 			});
 		}
-		
 
 	}
 }

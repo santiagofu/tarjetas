@@ -7,9 +7,6 @@ import javax.swing.JOptionPane;
 
 import menusIndividuales.MenuEstandares;
 import menusIndividuales.MenuLeyes;
-import menusIndividuales.MenuMetricaV3;
-import menusIndividuales.MenuNTI;
-
 import javax.swing.JButton;
 import java.awt.Font;
 import java.awt.Color;
