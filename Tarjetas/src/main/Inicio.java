@@ -16,6 +16,7 @@ import java.awt.event.ActionEvent;
 public class Inicio {
 
 	private JFrame frmTarjetas;
+	private static String a = "Arial";
 
 	/**
 	 * Launch the application.
@@ -53,24 +54,24 @@ public class Inicio {
 
 		JButton btnLeyes = new JButton("LEYES");
 		btnLeyes.setBackground(Color.LIGHT_GRAY);
-		btnLeyes.setFont(new Font("Arial", Font.BOLD, 20));
+		btnLeyes.setFont(new Font(a, Font.BOLD, 20));
 		btnLeyes.setBounds(272, 92, 202, 49);
 		frmTarjetas.getContentPane().add(btnLeyes);
 
 		JButton btnEstandares = new JButton("EST\u00C1NDARES");
-		btnEstandares.setFont(new Font("Arial", Font.BOLD, 20));
+		btnEstandares.setFont(new Font(a, Font.BOLD, 20));
 		btnEstandares.setBackground(Color.LIGHT_GRAY);
 		btnEstandares.setBounds(272, 205, 202, 49);
 		frmTarjetas.getContentPane().add(btnEstandares);
 
 		JButton btnNTI = new JButton("Normas T\u00E9cnicas Interoperabilidad");
-		btnNTI.setFont(new Font("Arial", Font.BOLD, 20));
+		btnNTI.setFont(new Font(a, Font.BOLD, 20));
 		btnNTI.setBackground(Color.LIGHT_GRAY);
 		btnNTI.setBounds(189, 303, 385, 57);
 		frmTarjetas.getContentPane().add(btnNTI);
 
 		JButton btnMetrica3 = new JButton("M\u00C9TRICA V3");
-		btnMetrica3.setFont(new Font("Arial", Font.BOLD, 20));
+		btnMetrica3.setFont(new Font(a, Font.BOLD, 20));
 		btnMetrica3.setBackground(Color.LIGHT_GRAY);
 		btnMetrica3.setBounds(272, 407, 202, 49);
 		frmTarjetas.getContentPane().add(btnMetrica3);
