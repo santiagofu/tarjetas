@@ -46,7 +46,7 @@ public class Inicio {
 		frmTarjetas = new JFrame();
 		frmTarjetas.getContentPane().setBackground(new Color(135, 206, 235));
 		frmTarjetas.setTitle("Tarjetas");
-		frmTarjetas.setBounds(400, 200, 800, 600);
+		frmTarjetas.setBounds(400, 100, 800, 600);
 		frmTarjetas.setDefaultCloseOperation(3);
 		frmTarjetas.getContentPane().setLayout(null);
 

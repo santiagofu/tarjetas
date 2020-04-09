@@ -16,7 +16,7 @@ public class MenuEstandares {
 		JFrame frmEstandares = new JFrame();
 		frmEstandares.getContentPane().setBackground(new Color(55, 184, 219));
 		frmEstandares.setTitle("Estándares");
-		frmEstandares.setBounds(600, 300, 400, 400);
+		frmEstandares.setBounds(600, 150, 400, 400);
 		frmEstandares.setDefaultCloseOperation(2);
 		frmEstandares.getContentPane().setLayout(null);
 
@@ -40,6 +40,7 @@ public class MenuEstandares {
 		});
 
 		btnJugar.addActionListener(e -> {
+			frmEstandares.dispose();
 			JugarEstandares j = new JugarEstandares();
 			j.jugar();
 		});

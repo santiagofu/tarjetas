@@ -15,7 +15,7 @@ public class MenuLeyes {
 		JFrame frmLeyes = new JFrame();
 		frmLeyes.getContentPane().setBackground(new Color(55, 184, 219));
 		frmLeyes.setTitle("Leyes");
-		frmLeyes.setBounds(600, 300, 400, 400);
+		frmLeyes.setBounds(600, 150, 400, 400);
 		frmLeyes.setDefaultCloseOperation(2);
 		frmLeyes.getContentPane().setLayout(null);
 
@@ -38,6 +38,7 @@ public class MenuLeyes {
 		});
 
 		btnJugar.addActionListener(e -> {
+			frmLeyes.dispose();
 			JugarLeyes jg = new JugarLeyes();
 			jg.jugar();
 		});
